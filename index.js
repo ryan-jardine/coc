@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyCm8KbBhLf9oyRoXYTuZMDqtlQyO9k7RUg",
     authDomain: "coc-app-c7033.firebaseapp.com",
@@ -33,7 +34,8 @@ import path from 'path';
 
 const currentModuleURL = new URL(import.meta.url);
 const currentDir = path.dirname(currentModuleURL.pathname);
-const publicDir = path.join(currentDir, 'public');
+const publicDir = path.join(currentDir);
+
 
 /*const currentModuleURL = new URL(import.meta.url);
 const currentDir = path.dirname(currentModuleURL.pathname);

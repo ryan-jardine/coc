@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import {collection, addDoc} from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCm8KbBhLf9oyRoXYTuZMDqtlQyO9k7RUg",
@@ -24,10 +25,8 @@ regButton.onclick = async function () {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    import {collection, addDoc} from "firebase/firestore";
-
     try {
-        const docRef = await addDoc(collection(db, "users"), {
+        const docRef = await addDoc(collection(database, "users"), {
             username: username,
             email: email,
             password: password
